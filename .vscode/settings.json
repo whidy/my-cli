@@ -1,0 +1,25 @@
+{
+  "eslint.enable": true,
+  "editor.formatOnSave": false,
+  "files.eol": "\n",
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "javascript",
+      "autoFix": true
+    }
+  ],
+  "html.format.enable": false,
+  "javascript.format.enable": false,
+  "prettier.eslintIntegration": true,
+  "eslint.alwaysShowStatus": true,
+  "vetur.format.defaultFormatter.css": "prettier"
+}
