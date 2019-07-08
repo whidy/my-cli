@@ -4,16 +4,16 @@
 
 基于[`npx create-nuxt-app nuxt-koa-basic`](https://zh.nuxtjs.org/guide/installation)命令，初始化如下配置的项目进行调整，相关参考项目[hare](https://github.com/clarkdo/hare)。
 
-? Project name `nuxt-koa-basic`
-? Project description `My delightful Nuxt.js project`
-? Author name `Whidy`
-? Choose the package manager `Npm`
-? Choose UI framework `Element`
-? Choose custom server framework `Koa`
-? Choose Nuxt.js modules `Axios`
-? Choose linting tools `ESLint`
-? Choose test framework `None`
-? Choose rendering mode `Universal (SSR)`
+* ? Project name `nuxt-koa-basic`
+* ? Project description `My delightful Nuxt.js project`
+* ? Author name `Whidy`
+* ? Choose the package manager `Npm`
+* ? Choose UI framework `Element`
+* ? Choose custom server framework `Koa`
+* ? Choose Nuxt.js modules `Axios`
+* ? Choose linting tools `ESLint`
+* ? Choose test framework `None`
+* ? Choose rendering mode `Universal (SSR)`
 
 ## 修改vscode项目自定义配置
 
