@@ -113,13 +113,17 @@
 }
 ```
 
-大致如上，其他需要修改的配置自行调整。
+客户端相关配置，大致如上，其他需要修改的配置自行调整。
+
+## 服务端配置
+
+默认只有一个简单的server，这里我们手动添加服务端的middlewares、routes，以及可能用到的utils。
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ npm run install
+$ npm i
 
 # serve with hot reload at localhost:3000
 $ npm run dev
