@@ -17,9 +17,6 @@
       "autoFix": true
     }
   ],
-  "files.associations": {
-    "*.css": "scss",
-  },
   "html.format.enable": false,
   "javascript.format.enable": false,
   "prettier.eslintIntegration": true,

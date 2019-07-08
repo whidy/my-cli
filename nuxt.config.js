@@ -23,7 +23,7 @@ module.exports = {
   css: [
     'minireset.css/minireset.css',
     'element-ui/lib/theme-chalk/index.css',
-    '@/assets/styles/main.css'
+    { src: '@/assets/styles/main.scss', lang: 'scss' }
   ],
   plugins: [
     '@/plugins/element-ui',
@@ -35,17 +35,6 @@ module.exports = {
   modules: ['@nuxtjs/axios', 'cookie-universal-nuxt'],
   axios: {},
   build: {
-    postcss: {
-      syntax: 'postcss-scss',
-      plugins: {
-        precss: {}
-      },
-      preset: {
-        autoprefixer: {
-          grid: true
-        }
-      }
-    },
     transpile: [/^element-ui/],
     extend(config, ctx) {}
   }

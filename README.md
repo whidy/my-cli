@@ -37,9 +37,6 @@
       "autoFix": true
     }
   ],
-  "files.associations": {
-    "*.css": "scss",
-  },
   "html.format.enable": false,
   "javascript.format.enable": false,
   "prettier.eslintIntegration": true,
@@ -54,7 +51,7 @@
 * [vue-clipboard2](https://github.com/Inndy/vue-clipboard2)
 * [dayjs](https://github.com/iamkun/dayjs)
 * [cookie-universal-nuxt](https://github.com/microcipcip/cookie-universal/tree/master/packages/cookie-universal-nuxt)
-* `postcss-loader`、`precss`、`postcss-scss`来满足postcss支持。关于[nuxt下的postcss](https://zh.nuxtjs.org/api/configuration-build/#postcss)
+* `sass-loader`、`node-sass`来支持scss。
 
 对插件进行二次封装，在目录`plugins`内添加axios.js、clipboard.js、dayjs.js
 
@@ -83,7 +80,7 @@
   css: [
     'minireset.css/minireset.css',
     'element-ui/lib/theme-chalk/index.css',
-    '@/assets/styles/main.css'
+    { src: '@/assets/styles/main.scss', lang: 'scss' }
   ],
   plugins: [
     '@/plugins/element-ui',
@@ -96,20 +93,7 @@
     '@nuxtjs/axios',
     'cookie-universal-nuxt'
   ],
-  build: {
-    postcss: {
-      syntax: 'postcss-scss',
-      plugins: {
-        'precss': {}
-      },
-      preset: {
-        autoprefixer: {
-          grid: true
-        }
-      }
-    },
-    // ...
-  }
+  // ...
 }
 ```
 
