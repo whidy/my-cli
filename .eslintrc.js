@@ -5,14 +5,17 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    ecmaFeatures: {
+      legacyDecorators: true
+    }
   },
   extends: [
     '@nuxtjs',
     'plugin:nuxt/recommended'
   ],
-  plugins: [],
   rules: {
+    'space-before-function-paren': ["error", "never"],
     'nuxt/no-cjs-in-config': 'off',
     'no-console': 'off',
     'no-unused-vars': 'off',

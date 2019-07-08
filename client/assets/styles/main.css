@@ -1,0 +1,9 @@
+$blue: #056ef0;
+.postcss {
+  display: flex; // 这是scss注释
+  color: $blue;
+  p {
+    flex: 1;
+    color: red;
+  }
+}
