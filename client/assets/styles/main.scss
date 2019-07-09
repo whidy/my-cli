@@ -1,9 +1,14 @@
+@import 'uireset';
+
+.inner-wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 $blue: #056ef0;
 .scss {
-  display: flex;
   color: $blue;
   p {
-    flex: 1;
     color: red;
   }
 }

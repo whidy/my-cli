@@ -1,19 +1,20 @@
 const Koa = require('koa')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
-
-const app = new Koa()
-
 const config = require('../nuxt.config.js')
-config.dev = !(app.env === 'production')
+const useMiddlewares = require('./middlewares')
+const useRoutes = require('./routes')
+const consts = require('./utils/consts')
 
 async function start() {
-  const nuxt = new Nuxt(config)
+  const host = consts.HOST
+  const port = consts.PORT
+  const app = new Koa()
 
-  const {
-    host = process.env.HOST || '127.0.0.1',
-    port = process.env.PORT || 3000
-  } = nuxt.options.server
+  app.keys = ['nuxt-koa-basic']
+  config.dev = !(app.env === 'production')
+
+  const nuxt = new Nuxt(config)
 
   if (config.dev) {
     const builder = new Builder(nuxt)
@@ -22,16 +23,22 @@ async function start() {
     await nuxt.ready()
   }
 
-  app.use((ctx) => {
+  useMiddlewares(app)
+  useRoutes(app)
+
+  app.use(async(ctx, next) => {
+    await next()
     ctx.status = 200
-    ctx.respond = false
-    ctx.req.ctx = ctx
-    nuxt.render(ctx.req, ctx.res)
+    ctx.req.session = ctx.session
+    await new Promise((resolve, reject) => {
+      nuxt.render(ctx.req, ctx.res, err => err ? reject(err) : resolve())
+    })
   })
 
   app.listen(port, host)
+  const _host = host === '0.0.0.0' ? 'localhost' : host
   consola.ready({
-    message: `Server listening on http://${host}:${port}`,
+    message: `Server listening on http://${_host}:${port}\n`,
     badge: true
   })
 }

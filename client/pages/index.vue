@@ -1,38 +1,39 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
+  <div id="app" class="home">
+    <Headbar />
+    <div class="inner-wrap">
       <h1 class="title">nuxt-koa-basic</h1>
       <h2 class="subtitle">My delightful Nuxt.js project</h2>
-      <div class="links postcss">
-        <p>hello world</p>
+      <h2 class="subtitle">hello world</h2>
+
+      <div class="links scss">
         <p>{{ this.$store.state.counter }}</p>
         <el-button @click="$store.dispatch('SET_RANDOM')">add after 1s</el-button>
       </div>
       <div class="test">
-        <p>blue font</p>
+        <nuxt-link to="/login" tag="p">超管登录</nuxt-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Headbar from '@/components/Headbar'
 
 export default {
   components: {
-    Logo
+    Headbar
   },
   data() {
     return {
     }
   },
   methods: {
-    do() {}
+    doa() {}
   }
 }
 </script>
-<style lang="postcss" scoped>
+<style lang="scss" scoped>
 .test {
   p {
     color: blue;
