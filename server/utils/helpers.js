@@ -24,6 +24,7 @@ const createRequest = async(method, url, requestConfig) => {
   if (payload !== null) {
     requestConfigObj.data = querystring.stringify(payload)
   }
+  console.log(requestConfigObj)
   const recv = await axios.request(requestConfigObj)
   const data = Object.assign({}, recv.data)
   return Promise.resolve(data)

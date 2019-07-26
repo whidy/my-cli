@@ -15,12 +15,12 @@ module.exports = (app) => {
   app.use(session(SESSION_CONFIG, app))
   app.use(compress({}))
   app.use(body())
-  app.use(async(ctx, next) => {
-    if (!ctx.session.authUser && !/\/api\/auth\/\w+/.test(ctx.url) && ctx.url.split('/')[1] === 'api') {
-      ctx.body = { code: 401, msg: 'not auth' }
-      return false
-    } else {
-      await next()
-    }
-  })
+  // app.use(async(ctx, next) => {
+  //   if (!ctx.session.authUser && !/\/api\/auth\/\w+/.test(ctx.url) && ctx.url.split('/')[1] === 'api') {
+  //     ctx.body = { code: 401, msg: 'not auth' }
+  //     return false
+  //   } else {
+  //     await next()
+  //   }
+  // })
 }

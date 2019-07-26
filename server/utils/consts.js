@@ -5,7 +5,7 @@ const SESS_KEY = 'nuxt-koa-basic:sess'
 const AXIOS_DEFAULT_TIMEOUT = 5000
 const HOST = process.env.HOST || '0.0.0.0'
 const PORT = process.env.PORT || '3000'
-const ENDPOINT_ADDR = process.env.ENDPOINT_ADDR || 'http://localhost:7777'
+const ENDPOINT_ADDR = process.env.ENDPOINT_ADDR || 'http://localhost:5555'
 
 module.exports = Object.freeze({
   APP,

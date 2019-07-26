@@ -15,14 +15,28 @@
       </el-col>
       <el-col :span="12">
         <div class="nav-top">
-          <ul class="nav-info">
+          <ul v-if="!isLogined" class="nav-info">
             <li class="item">
               <a
                 href="//www.51.la/login?source=duanlian&redirect=https%3A%2F%2Fdwz.51.la%2Fwyla%2Flogin">注册</a>
             </li>
-            <li class>
+            <li class="item">
               <a
                 href="//www.51.la/login?source=duanlian&redirect=https%3A%2F%2Fdwz.51.la%2Fwyla%2Flogin">登录</a>
+            </li>
+          </ul>
+          <ul v-else class="nav-info">
+            <li class="item">
+              <el-dropdown
+                class="user-settings"
+                trigger="click"
+                size="medium"
+                @command="doUser">
+                <a class="el-dropdown-link">{{ $store.state.authUser.name }}</a>
+                <el-dropdown-menu slot="dropdown">
+                  <el-dropdown-item command="logout">退出</el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
             </li>
           </ul>
           <ul class="nav-menu">
@@ -45,12 +59,21 @@
 export default {
   data() {
     return {
-      isLogin: false,
+      isLogined: this.$store.state.authUser,
       bgToBlack: false,
       isScroll: false
     }
   },
-  methods: {}
+  methods: {
+    doUser(command) {
+      this[command]()
+    },
+    async logout() {
+      await this.$store.dispatch('LOGOUT', async() => {
+        await this.$router.push('/login')
+      })
+    }
+  }
 }
 </script>
 

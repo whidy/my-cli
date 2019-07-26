@@ -63,6 +63,12 @@ export default {
   },
   methods: {
     login() {
+      this.$axios.post('/auth/login', {
+        name: this.user.account
+      }).then((res) => {
+        this.$store.commit('USER', res.data)
+        this.$router.push('/')
+      })
     }
   }
 }

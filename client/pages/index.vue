@@ -4,8 +4,8 @@
     <div class="inner-wrap">
       <h1 class="title">nuxt-koa-basic</h1>
       <h2 class="subtitle">My delightful Nuxt.js project</h2>
-      <h2 class="subtitle">hello world</h2>
-
+      <h2 class="subtitle">hello <strong>{{ name }}</strong></h2>
+      <el-button v-if="isLogined" @click="testRequest">测试请求</el-button>
       <div class="links scss">
         <p>{{ this.$store.state.counter }}</p>
         <el-button @click="$store.dispatch('SET_RANDOM')">add after 1s</el-button>
@@ -28,8 +28,27 @@ export default {
     return {
     }
   },
+  computed: {
+    name() {
+      if (this.isLogined) {
+        return `管理员：${this.$store.state.authUser.name}`
+      }
+      return '小游客(*^__^*)'
+    },
+    isLogined() {
+      const user = this.$store.state.authUser
+      if (user) {
+        return true
+      }
+      return false
+    }
+  },
   methods: {
-    doa() {}
+    testRequest() {
+      this.$axios.post('/posts').then((res) => {
+        console.log(res.data)
+      })
+    }
   }
 }
 </script>

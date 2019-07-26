@@ -4,12 +4,16 @@ import { Message } from 'element-ui'
 export const strict = true
 
 export const state = () => ({
-  counter: 0
+  counter: 0,
+  authUser: null
 })
 
 export const mutations = {
   ADD(state, number = 0) {
     state.counter += number
+  },
+  USER(state, data = {}) {
+    state.authUser = data
   }
 }
 
@@ -31,6 +35,11 @@ export const actions = {
       resolve()
     }, 1000))
     commit('ADD', number)
+  },
+  async LOGOUT({ commit }, callback) {
+    await this.$axios.post('/auth/logout')
+    commit('USER', null)
+    callback()
   }
 }
 

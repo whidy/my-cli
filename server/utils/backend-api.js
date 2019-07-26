@@ -1,6 +1,12 @@
 const authApi = {
-  login: '/user/login'
+  login: '/api/user/login'
+}
+
+const fakeApi = {
+  users: '/api/users',
+  posts: '/api/posts'
 }
 module.exports = {
-  authApi
+  authApi,
+  fakeApi
 }

@@ -33,7 +33,9 @@ module.exports = {
     '@/plugins/filter'
   ],
   modules: ['@nuxtjs/axios', 'cookie-universal-nuxt'],
-  axios: {},
+  axios: {
+    baseURL: '/api'
+  },
   build: {
     transpile: [/^element-ui/],
     extend(config, ctx) {}

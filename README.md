@@ -121,3 +121,7 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+## API SERVER
+
+我自己创建了个简单的fake api server，基于[json-server](api-json-server)，可以开启这个来进行测试。
