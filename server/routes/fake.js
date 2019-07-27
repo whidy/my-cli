@@ -1,18 +1,17 @@
 const Router = require('koa-router')
+// const urllib = require('urllib')
 const { createRequest } = require('../utils/helpers')
 const { fakeApi } = require('../utils/backend-api')
 const fake = new Router({
   prefix: '/api'
 })
 fake.post('/posts', async(ctx) => {
-  console.log('request posts start')
-  const result = await createRequest('post', fakeApi.posts, {
-    headers: {
-      'content-type': 'application/x-www-form-urlencoded',
-      Accept: 'xxxs'
-    }
-  })
-  console.log(result)
+  // const result = (await urllib.request(`http://localhost:5555${fakeApi.posts}`, {
+  //   method: 'POST',
+  //   dataType: 'json'
+  // })).data
+  // let resData
+  const result = await createRequest('post', fakeApi.posts)
   ctx.body = result
 })
 fake.get('/users', async(ctx) => {
