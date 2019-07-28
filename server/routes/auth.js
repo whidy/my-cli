@@ -1,6 +1,6 @@
 const Router = require('koa-router')
 const { getIp, createRequest } = require('../utils/helpers')
-const { authApi, reportApi } = require('../utils/backend-api')
+const { authApi } = require('../backend-api')
 const auth = new Router({
   prefix: '/api'
 })
@@ -19,6 +19,7 @@ auth.post('/auth/login', async(ctx) => {
   }
 })
 auth.post('/auth/logout', (ctx) => {
+  console.log('quit')
   ctx.session = null
   ctx.status = 200
 })

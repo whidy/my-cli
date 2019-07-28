@@ -6,5 +6,5 @@ export default async({
   $axios,
   query
 }) => {
-
+  const result = await $axios.get('/users')
 }

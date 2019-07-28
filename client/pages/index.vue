@@ -4,15 +4,26 @@
     <div class="inner-wrap">
       <h1 class="title">nuxt-koa-basic</h1>
       <h2 class="subtitle">My delightful Nuxt.js project</h2>
-      <h2 class="subtitle">hello <strong>{{ name }}</strong></h2>
-      <el-button v-if="isLogined" @click="testRequest">测试请求</el-button>
-      <div class="links scss">
-        <p>{{ this.$store.state.counter }}</p>
-        <el-button @click="$store.dispatch('SET_RANDOM')">add after 1s</el-button>
-      </div>
-      <div class="test">
-        <nuxt-link to="/login" tag="p">超管登录</nuxt-link>
-      </div>
+      <h2 class="subtitle">Hello <strong>{{ name }}</strong></h2>
+    </div>
+    <div class="inner-wrap">
+      <el-form>
+        <el-form-item>
+          <el-button @click="testRequest">测试数据请求</el-button>
+        </el-form-item>
+        <ul class="list">
+          <li v-for="(item, index) in posts" :key="index">
+            <h1>{{ item.title }}</h1>
+            <p>Author: {{ item.author }}</p>
+            <br>
+          </li>
+        </ul>
+        <el-form-item>
+          <div class="links scss">
+            <el-button @click="$store.dispatch('SET_RANDOM')">It will add after 1s,, now is {{ this.$store.state.counter }}</el-button>
+          </div>
+        </el-form-item>
+      </el-form>
     </div>
   </div>
 </template>
@@ -26,6 +37,7 @@ export default {
   },
   data() {
     return {
+      posts: []
     }
   },
   computed: {
@@ -46,7 +58,7 @@ export default {
   methods: {
     testRequest() {
       this.$axios.post('/posts').then((res) => {
-        console.log(res.data)
+        this.posts = res
       })
     }
   }
@@ -56,6 +68,15 @@ export default {
 .test {
   p {
     color: blue;
+  }
+}.inner-wrap {
+  min-width: 1200px;
+  // text-align: center;
+}
+.list {
+  text-align: left;
+  h1 {
+    font-weight: bold;
   }
 }
 </style>

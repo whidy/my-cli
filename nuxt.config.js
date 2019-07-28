@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'universal',
   srcDir: 'client/',
-  buildDir: 'dist/client/',
+  buildDir: 'dist/',
   rootDir: './',
   router: {
     middleware: ['check-auth']
@@ -37,7 +37,7 @@ module.exports = {
     baseURL: '/api'
   },
   build: {
-    transpile: [/^element-ui/],
+    // transpile: [/^element-ui/],
     extend(config, ctx) {}
   }
 }

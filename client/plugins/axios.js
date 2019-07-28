@@ -10,7 +10,7 @@ export default function({ $axios, query, redirect, app }) {
         config.data = { comId: currentComId }
       }
     }
-    console.log(config)
+    // console.log(config)
   })
 
   $axios.onResponse((response) => {

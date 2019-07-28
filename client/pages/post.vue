@@ -1,10 +1,12 @@
 <template>
   <div class="posts">
-    here are posts
+    here are posts<br>
+    =======================
     <ul class="list">
-      <li v-for="item in posts" :key="item.id">
-        <h2>{{ item.title }}</h2>
+      <li v-for="(item, index) in posts" :key="index">
+        <h1>{{ item.title }}</h1>
         <p>Author: {{ item.author }}</p>
+        <br>
       </li>
     </ul>
   </div>
@@ -23,7 +25,7 @@ export default {
   methods: {
     getPosts() {
       this.$axios.post('/posts').then((data) => {
-        console.log(data)
+        this.posts = data
       })
     }
   }

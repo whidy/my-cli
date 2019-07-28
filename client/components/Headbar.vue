@@ -17,12 +17,7 @@
         <div class="nav-top">
           <ul v-if="!isLogined" class="nav-info">
             <li class="item">
-              <a
-                href="//www.51.la/login?source=duanlian&redirect=https%3A%2F%2Fdwz.51.la%2Fwyla%2Flogin">注册</a>
-            </li>
-            <li class="item">
-              <a
-                href="//www.51.la/login?source=duanlian&redirect=https%3A%2F%2Fdwz.51.la%2Fwyla%2Flogin">登录</a>
+              <nuxt-link to="/login">登录</nuxt-link>
             </li>
           </ul>
           <ul v-else class="nav-info">
@@ -41,13 +36,13 @@
           </ul>
           <ul class="nav-menu">
             <li>
-              <a href="//www.51.la">网站统计</a>
+              <a href="https://www.whidy.cn">博客</a>
             </li>
             <li>
-              <a href="/doc/lian-xi-wo-men.html">联系我们</a>
+              <a href="https://www.whidy.net">博客（旧）</a>
             </li>
             <li>
-              <a href="/doc">帮助</a>
+              <a href="https://github.com/whidy">Github</a>
             </li>
           </ul>
         </div>
@@ -70,7 +65,7 @@ export default {
     },
     async logout() {
       await this.$store.dispatch('LOGOUT', async() => {
-        await this.$router.push('/login')
+        await this.$router.push('/')
       })
     }
   }
