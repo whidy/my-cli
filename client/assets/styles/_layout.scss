@@ -1,0 +1,24 @@
+/*
+__nuxt -> __layout ->
+#app（.page-type） ->
+  header
+  container ->
+    side
+    main ->
+      section(*) ->
+        el-card
+*/
+body, #__nuxt, #__layout, #app {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  min-width: 1200px;
+}
+.container {
+  min-width: 1200px;
+}
+
+.inner-wrap {
+  width: 1200px;
+  margin: 0 auto;
+}

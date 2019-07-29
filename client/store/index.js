@@ -27,7 +27,6 @@ export const actions = {
   // https://zh.nuxtjs.org/examples/auth-routes/#nuxtserverinit-%E6%96%B9%E6%B3%95
   nuxtServerInit({ commit }, { req }) {
     if (req.session && req.session.authUser) {
-      console.log(req.session.authUser)
       commit('USER', req.session.authUser)
     }
   },

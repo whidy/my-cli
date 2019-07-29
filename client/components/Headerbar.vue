@@ -5,7 +5,7 @@
       class="inner-wrap"
       justify="space-between"
       align="middle">
-      <el-col :span="6">
+      <el-col :span="4">
         <nuxt-link to="/" tag="div">
           <img
             class="logo"
@@ -13,7 +13,7 @@
             alt>
         </nuxt-link>
       </el-col>
-      <el-col :span="12">
+      <el-col :span="20">
         <div class="nav-top">
           <ul v-if="!isLogined" class="nav-info">
             <li class="item">
@@ -27,7 +27,7 @@
                 trigger="click"
                 size="medium"
                 @command="doUser">
-                <a class="el-dropdown-link">{{ $store.state.authUser || $store.state.authUser.name }}</a>
+                <a class="el-dropdown-link">{{ $store.state.authUser && $store.state.authUser.name }}</a>
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item command="logout">退出</el-dropdown-item>
                 </el-dropdown-menu>
@@ -35,13 +35,16 @@
             </li>
           </ul>
           <ul class="nav-menu">
-            <li>
+            <li class="item">
+              <nuxt-link to="/news">新闻</nuxt-link>
+            </li>
+            <li class="item">
               <a href="https://www.whidy.cn">博客</a>
             </li>
-            <li>
+            <li class="item">
               <a href="https://www.whidy.net">博客（旧）</a>
             </li>
-            <li>
+            <li class="item">
               <a href="https://github.com/whidy">Github</a>
             </li>
           </ul>
@@ -75,7 +78,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   height: 60px;
-  background-color: #2f323b;
+  background-color: #000;
   .logo {
     width: 40px;
     // height: 60px;
@@ -87,7 +90,7 @@ export default {
     float: right;
     text-align: right;
     &.nav-menu {
-      width: 360px;
+      // width: 360px;
       a {
         padding: 0 25px;
       }

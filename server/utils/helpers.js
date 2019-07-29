@@ -25,8 +25,8 @@ const createRequest = async(method, url, requestConfig) => {
     requestConfigObj.data = querystring.stringify(payload)
   }
   const recv = await axios.request(requestConfigObj)
-  // const data = Object.assign({}, recv.data)
-  return Promise.resolve(recv.data)
+  const data = Object.assign({}, recv.data)
+  return Promise.resolve(data)
 }
 
 module.exports = {

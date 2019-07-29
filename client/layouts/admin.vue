@@ -1,4 +1,3 @@
-// for login, error or other page
 <template>
   <nuxt />
 </template>

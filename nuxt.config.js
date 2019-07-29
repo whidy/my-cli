@@ -34,10 +34,20 @@ module.exports = {
   ],
   modules: ['@nuxtjs/axios', 'cookie-universal-nuxt'],
   axios: {
-    baseURL: '/api'
+    prefix: '/api',
+    proxy: true
+  },
+  proxy: {
+    '/api': {
+      target: '//example.com',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': ''
+      }
+    }
   },
   build: {
-    // transpile: [/^element-ui/],
+    transpile: [/^element-ui/],
     extend(config, ctx) {}
   }
 }

@@ -1,0 +1,38 @@
+// box-card
+.box-card {
+  background-color: #fff;
+  &__hd {
+    padding: 11px 32px 11px;
+    border-bottom: 1px solid rgba(232, 232, 232, 1);
+    .mark {
+      font-size: 16px;
+      line-height: 32px;
+      display: inline-block;
+    }
+    .mark-sub {
+      float: right;
+      & > * {
+        margin-left: 9px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      .form-inline {
+        .el-form-item {
+          margin: 0;
+        }
+      }
+    }
+  }
+  &__bd {
+    padding: 24px 32px;
+  }
+
+  &__lite {
+    .box-card__hd {
+      border-bottom: 0;
+      padding-bottom: 0;
+      height: 45px;
+    }
+  }
+}
