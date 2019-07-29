@@ -124,4 +124,4 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 
 ## API SERVER
 
-我自己创建了个简单的fake api server，基于[json-server](api-json-server)，可以开启这个来进行测试。
+我自己创建了个简单的fake api server，基于[json-server](https://github.com/whidy/api-json-server)，可以开启这个来进行测试。
