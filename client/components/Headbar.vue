@@ -27,7 +27,7 @@
                 trigger="click"
                 size="medium"
                 @command="doUser">
-                <a class="el-dropdown-link">{{ $store.state.authUser.name }}</a>
+                <a class="el-dropdown-link">{{ $store.state.authUser || $store.state.authUser.name }}</a>
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item command="logout">退出</el-dropdown-item>
                 </el-dropdown-menu>
