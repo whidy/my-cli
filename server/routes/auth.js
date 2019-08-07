@@ -27,7 +27,11 @@ auth.post('/auth/whois', (ctx) => {
       msg: '登录成功！'
     }
   } else {
-    ctx.redirect('/')
+    ctx.body = {
+      code: 401,
+      data: null,
+      msg: '无权访问'
+    }
   }
 })
 auth.post('/auth/logout', (ctx) => {

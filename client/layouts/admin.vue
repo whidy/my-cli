@@ -85,7 +85,7 @@ export default {
   },
   computed: {
     activedIndex() {
-      return this.$route.path.replace('/admin/', '')
+      return this.$route.name
     }
   },
   // mounted() {
