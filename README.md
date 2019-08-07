@@ -1,7 +1,24 @@
-# my-cli
+# nuxt-ssr
 
-存放个人常用的cli配置。便于快速开发。有以下几种类型：
+> My first-class Nuxt.js project
 
-## 基于SSR + Vue.js
+**该分支用于SSR演示，SSR模式下有两种一种静态部署，一种Node部署，如果需要静态部署，请在nuxt.config.js中添加相应的设置。**
 
-* [Nuxt.js + Koa](https://github.com/whidy/my-cli/tree/nuxt-koa-basic)
+## Build Setup
+
+``` bash
+# install dependencies
+$ npm run install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
