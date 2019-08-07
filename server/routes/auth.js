@@ -7,19 +7,30 @@ const auth = new Router({
 auth.post('/auth/login', async(ctx) => {
   const body = Object.assign({ ip: getIp(ctx.req) }, ctx.request.body)
   // request for backend
-  const fakeData = {
-    role: 100
-  }
-  Object.assign(fakeData, ctx.request.body)
-  ctx.session.authUser = fakeData
+  const result = await createRequest('post', authApi.login)
+  // const fakeData = {
+  //   role: 100
+  // }
+  // Object.assign(fakeData, ctx.request.body)
+  ctx.session.authUser = result.data
   ctx.body = {
     code: 200,
-    data: fakeData,
+    data: result.data,
     msg: '登录成功！'
   }
 })
+auth.post('/auth/whois', (ctx) => {
+  if (ctx.session.authUser) {
+    ctx.body = {
+      code: 200,
+      data: ctx.session.authUser,
+      msg: '登录成功！'
+    }
+  } else {
+    ctx.redirect('/')
+  }
+})
 auth.post('/auth/logout', (ctx) => {
-  console.log('quit')
   ctx.session = null
   ctx.status = 200
 })

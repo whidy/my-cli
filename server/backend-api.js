@@ -1,5 +1,5 @@
 const authApi = {
-  login: '/api/user/login'
+  login: '/api/user'
 }
 
 const fakeApi = {

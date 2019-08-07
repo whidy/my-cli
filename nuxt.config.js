@@ -4,7 +4,7 @@ module.exports = {
   buildDir: 'dist/',
   rootDir: './',
   router: {
-    middleware: ['check-auth']
+    middleware: ['check-auth', 'route-handler']
   },
   head: {
     title: process.env.npm_package_name || '',

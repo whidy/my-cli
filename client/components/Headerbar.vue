@@ -29,6 +29,7 @@
                 @command="doUser">
                 <a class="el-dropdown-link">{{ $store.state.authUser && $store.state.authUser.name }}</a>
                 <el-dropdown-menu slot="dropdown">
+                  <el-dropdown-item command="admin">管理后台</el-dropdown-item>
                   <el-dropdown-item command="logout">退出</el-dropdown-item>
                 </el-dropdown-menu>
               </el-dropdown>
@@ -65,6 +66,9 @@ export default {
   methods: {
     doUser(command) {
       this[command]()
+    },
+    admin() {
+      this.$router.push('/admin')
     },
     async logout() {
       await this.$store.dispatch('LOGOUT', async() => {

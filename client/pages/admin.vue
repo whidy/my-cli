@@ -1,12 +1,18 @@
 <template>
   <div class="admin">
-    this is admin
+    <nuxt />
   </div>
 </template>
 
 <script>
 export default {
-  layout: 'empty'
+  layout: 'admin',
+  beforeCreate() {
+    console.log(this.$route.name)
+    // if (this.$route.name === 'admin') {
+    //   this.$router.push({ name: 'admin-overviews' })
+    // }
+  }
 }
 </script>
 
