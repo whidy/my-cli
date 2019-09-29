@@ -1,4 +1,11 @@
 {
+  "editor.formatOnSave": false,
+  "files.eol": "\n",
+  "eslint.validate": [ "javascript", "javascriptreact", { "language": "html", "autoFix": true } ],
+  "eslint.autoFixOnSave": true,
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
   "path-autocomplete.pathMappings": {
     "@": "${folder}/assets",
   }
