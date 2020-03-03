@@ -1,7 +1,24 @@
-# my-cli
+# 51la-sso-web
 
-存放个人常用的cli配置。便于快速开发。有以下几种类型：
+## Project setup
+```
+npm install
+```
 
-## 基于SSR + Vue.js
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-* [Nuxt.js + Koa](https://github.com/whidy/my-cli/tree/nuxt-koa-basic)
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
