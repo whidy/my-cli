@@ -1,0 +1,17 @@
+{
+  "eslint.enable": true,
+  "editor.formatOnSave": false,
+  "files.eol": "\n",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "html.format.enable": false,
+  "javascript.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.html": "prettier",
+  "liveServer.settings.root": "/dist",
+  "path-autocomplete.pathMappings": {
+    "@": "/"
+  }
+}
