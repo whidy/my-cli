@@ -1,6 +1,9 @@
 <template>
-  <div class="home">
-    <el-button type="primary">主要按钮</el-button>
+  <div class="login">
+    <!-- <el-button type="primary">主要按钮</el-button> -->
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      Button
+    </button>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
@@ -26,3 +29,5 @@ export default {
   },
 }
 </script>
+
+<style src="@/assets/styles/tailwind.css">
