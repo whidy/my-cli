@@ -1,4 +1,21 @@
-# 51la-sso-web
+# Universal Vue Project With Vue CLI 4
+
+> a cli for myself
+
+## Features
+
+* babel
+* eslint(recomended + airbnb + rules)
+* vue-router
+* vuex
+* sass/scss(dart-sass)
+
+## Plugins
+
+* axios
+* ElementUI
+* dayjs(if needed)
+* js-cookie(if needed)
 
 ## Project setup
 ```
