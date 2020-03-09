@@ -5,7 +5,7 @@
 ## Features
 
 * babel
-* eslint(recomended + airbnb + rules)
+* eslint(recomended + rules)
 * vue-router
 * vuex
 * sass/scss(dart-sass)
