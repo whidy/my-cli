@@ -12,10 +12,17 @@
 
 ## Plugins
 
-* axios
-* ElementUI
-* dayjs(if needed)
-* js-cookie(if needed)
+* [axios](https://github.com/axios/axios)
+* [tailwind](https://tailwindcss.com/)
+* [dayjs](https://github.com/iamkun/dayjs)(if needed)
+* [js-cookie](https://github.com/js-cookie/js-cookie)(if needed)
+* [popperjs](https://github.com/popperjs/popper-core)(if needed)
+
+## Maybe Useful
+
+* [Tailwind CHEAT SHEET](https://nerdcave.com/tailwind-cheat-sheet)
+* [Handling Authentication In Vue Using Vuex](https://scotch.io/tutorials/handling-authentication-in-vue-using-vuex#toc-prerequisites)
+* [How To Set Up Vue.js Authentication and Route Handling Using vue-router](https://www.digitalocean.com/community/tutorials/how-to-set-up-vue-js-authentication-and-route-handling-using-vue-router#conclusion)
 
 ## Project setup
 ```

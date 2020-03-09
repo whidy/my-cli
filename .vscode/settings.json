@@ -9,9 +9,10 @@
   "javascript.format.enable": true,
   "eslint.alwaysShowStatus": true,
   "vetur.format.defaultFormatter.css": "prettier",
-  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.html": "prettyhtml",
+  "vetur.format.defaultFormatter.scss": "prettier",
   "liveServer.settings.root": "/dist",
   "path-autocomplete.pathMappings": {
-    "@": "/"
+    "@": "./src"
   }
 }
