@@ -4,8 +4,9 @@
 
 ## Features
 
+* vscode settings(auto format, vetur 0.24.0)
 * babel
-* eslint(recomended + airbnb + rules)
+* eslint(recomended + rules)
 * vue-router
 * vuex
 * sass/scss(dart-sass)

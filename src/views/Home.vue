@@ -1,9 +1,6 @@
 <template>
   <div class="login">
-    <!-- <el-button type="primary">主要按钮</el-button> -->
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-      Button
-    </button>
+    <el-button type="primary">主要按钮</el-button>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
@@ -19,6 +16,7 @@ export default {
     HelloWorld,
   },
   mounted() {
+    // test
     this.$axios.post('/abc', {
       a: 1,
     }, {
@@ -29,5 +27,3 @@ export default {
   },
 }
 </script>
-
-<style src="@/assets/styles/tailwind.css">

@@ -12,8 +12,6 @@ export default {
 }
 </script>
 
-<style src="@/assets/styles/tailwind.css"></style>
-
 <style lang="scss">
 html {
   font-family: "PingFangSC-Regular", "SourceHanSansCN", "Microsoft YaHei",
