@@ -33,7 +33,8 @@
 </template>
 <script>
 // import NotificationDropdownComponent from './NotificationDropdown.vue'
-import UserDropdownComponent from './UserDropdown.vue'
+// import UserDropdownComponent from './UserDropdown.vue';
+
 export default {
   components: {
     // NotificationDropdownComponent,
@@ -42,12 +43,12 @@ export default {
   data() {
     return {
       collapseShow: 'hidden'
-    }
+    };
   },
   methods: {
-    toggleCollapseShow: function(classes) {
-      this.collapseShow = classes
+    toggleCollapseShow(classes) {
+      this.collapseShow = classes;
     }
   }
-}
+};
 </script>

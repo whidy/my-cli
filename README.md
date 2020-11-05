@@ -9,6 +9,7 @@
 * vue-router
 * vuex
 * sass/scss(dart-sass)
+* Tailwindcss with PurgeCSS
 
 ## Plugins
 

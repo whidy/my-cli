@@ -7,18 +7,18 @@ module.exports = {
     },
     extend: {
       colors: {
-        'c:yaola': '#fe2827',
+        'c:yaola': '#fe2827'
       },
       height: {
-        '15': '60px'
+        15: '60px'
       },
       margin: {
-        '96': '24rem',
-        '128': '32rem',
-      },
+        96: '24rem',
+        128: '32rem'
+      }
     }
   },
   variants: {
     opacity: ['responsive', 'hover']
   }
-}
+};

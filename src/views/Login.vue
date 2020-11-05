@@ -66,16 +66,16 @@
 <script>
 export default {
   methods: {
-    login: function() {
-      let email = this.email
-      let password = this.password
+    login() {
+      const { email } = this;
+      const { password } = this;
       this.$store
         .dispatch('login', { email, password })
         .then(() => this.$router.push('/'))
-        .catch(err => console.log(err))
+        .catch((err) => console.log(err));
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

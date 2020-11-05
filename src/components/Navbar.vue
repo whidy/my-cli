@@ -11,26 +11,27 @@
   </header>
 </template>
 <script>
-import UserDropdownComponent from './UserDropdown.vue'
+import UserDropdownComponent from './UserDropdown.vue';
+
 export default {
   components: {
     UserDropdownComponent
   },
   methods: {
     handleEnter(e) {
-      const el = e.target
+      const el = e.target;
       if (el.className.includes('item')) {
-        el.className += ' item-active'
+        el.className += ' item-active';
       }
     },
     handleLeave(e) {
-      const el = e.target
+      const el = e.target;
       if (el.className.includes('item')) {
-        el.className = el.className.replace(' item-active', '')
+        el.className = el.className.replace(' item-active', '');
       }
     }
   }
-}
+};
 </script>
 
 

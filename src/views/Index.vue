@@ -56,29 +56,41 @@
           </footer>
         </div> -->
       </div>
+      <div class="hello">Hello Man!</div>
     </div>
   </div>
 </template>
 <script>
-import NavbarComponent from '@/components/Navbar.vue'
-import SidebarComponent from '@/components/Sidebar.vue'
+import NavbarComponent from '@/components/Navbar.vue';
+import SidebarComponent from '@/components/Sidebar.vue';
 // import LineChartComponent from '../components/LineChart.vue'
 // import BarChartComponent from '../components/BarChart.vue'
 export default {
   name: 'DashboardPage',
   components: {
     NavbarComponent,
-    SidebarComponent,
+    SidebarComponent
     // LineChartComponent,
     // BarChartComponent
   },
   data() {
     return {
       date: new Date().getFullYear()
-    }
+    };
   },
   mounted() {
     // console.log(111)
   }
-}
+};
 </script>
+
+
+<style lang="scss" scoped>
+.hello {
+  color: red;
+}
+.test {
+  // useless style test
+  color: blue;
+}
+</style>
