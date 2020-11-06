@@ -29,7 +29,7 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    login({ commit }, user) {
+    login({ commit }, { email = 'whidy@whidy.net', password = '123' }) {
       return new Promise((resolve, reject) => {
         commit('auth_request');
         // needs backend api
@@ -54,7 +54,9 @@ export default new Vuex.Store({
         // };
         cookie.set('token', token, { expires: 1 });
         $axios.defaults.headers.common.Authorization = token;
-        commit('auth_success', token, user);
+        commit('auth_success', token, {
+          email, password
+        });
         resolve();
       });
     }

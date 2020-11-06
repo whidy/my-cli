@@ -4,14 +4,15 @@
       <div class="w-full xl:w-3/4 lg:w-11/12 px-8 flex">
         <div class="lg:w-1/2" />
         <div class="w-full lg:w-1/2 bg-white rounded-lg lg:rounded-l-none">
-          <h3 class="pt-4 text-2xl text-center">Welcome Back!</h3>
-          <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+          <h3 class="pt-6 text-2xl text-center">Welcome Back!</h3>
+          <form class="px-8 pt-6 pb-2 mb-4 bg-white rounded">
             <div class="mb-4">
               <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
                 email
               </label>
               <input
                 id="email"
+                v-model="form.email"
                 class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="email">
@@ -22,6 +23,7 @@
               </label>
               <input
                 id="password"
+                v-model="form.password"
                 class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                 type="password"
                 placeholder="******************">
@@ -41,7 +43,8 @@
                 Sign In
               </button>
             </div>
-            <hr class="mb-6 border-t">
+            <p class="text-sm italic text-gray-500">A sample login page. You can sign in directly.</p>
+            <!-- <hr class="mb-6 border-t">
             <div class="text-center">
               <a
                 class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
@@ -55,7 +58,7 @@
                 href="./forgot-password.html">
                 Forgot Password?
               </a>
-            </div>
+            </div> -->
           </form>
         </div>
       </div>
@@ -65,10 +68,17 @@
 
 <script>
 export default {
+  data() {
+    return {
+      form: {
+        email: '',
+        password: ''
+      }
+    };
+  },
   methods: {
     login() {
-      const { email } = this;
-      const { password } = this;
+      const { email, password } = this.form;
       this.$store
         .dispatch('login', { email, password })
         .then(() => this.$router.push('/'))
