@@ -1,7 +1,6 @@
 const purgecss = require('@fullhuman/postcss-purgecss')({
   content: [
     './public/**/*.html',
-    './src/**/*.html',
     './src/**/*.vue'
   ],
   defaultExtractor(content) {

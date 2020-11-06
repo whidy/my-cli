@@ -21,29 +21,7 @@
 
 ## Maybe Useful
 
+* [VueCLI 4.x下正确使用TailwindCSS和PurgeCSS示范](https://www.whidy.net/vuecli4-with-tailwindcss-purgecss-project-create)
 * [Tailwind CHEAT SHEET](https://nerdcave.com/tailwind-cheat-sheet)
 * [Handling Authentication In Vue Using Vuex](https://scotch.io/tutorials/handling-authentication-in-vue-using-vuex#toc-prerequisites)
 * [How To Set Up Vue.js Authentication and Route Handling Using vue-router](https://www.digitalocean.com/community/tutorials/how-to-set-up-vue-js-authentication-and-route-handling-using-vue-router#conclusion)
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
